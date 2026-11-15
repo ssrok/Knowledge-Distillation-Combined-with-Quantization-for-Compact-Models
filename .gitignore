@@ -1,0 +1,87 @@
+# ============================================================
+# .gitignore — Knowledge Distillation + Quantization project
+# ============================================================
+
+# --- Python bytecode & caches ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+
+# --- Virtual environments ---
+.venv/
+.venv311/
+venv/
+env/
+ENV/
+.env
+
+# --- Jupyter / IPython ---
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+profile_default/
+ipython_config.py
+
+# --- Model checkpoints & weights (can be large) ---
+models/teacher/*
+models/student_baseline/*
+models/student_distilled/*
+models/student_quantized/*
+# Keep directory structure
+!models/teacher/.gitkeep
+!models/student_baseline/.gitkeep
+!models/student_distilled/.gitkeep
+!models/student_quantized/.gitkeep
+
+# --- Generated / downloaded datasets ---
+data/processed/*.parquet
+data/processed/*.csv
+data/processed/metadata.json
+!data/processed/.gitkeep
+data/*
+!data/.gitkeep
+!data/processed/
+
+# --- Experiment results (auto-generated) ---
+results/*
+!results/.gitkeep
+
+# --- Hugging Face cache ---
+.cache/
+~/.cache/huggingface/
+
+# --- OS artefacts ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- IDE / editor ---
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# --- Weights & Biases / MLflow ---
+wandb/
+mlruns/
+mlflow.db
+
+# --- Miscellaneous ---
+*.log
+*.tmp
+*.bak
+*.orig
+colab_upload.zip

@@ -1,0 +1,46 @@
+# ============================================================
+# Knowledge Distillation + Quantization — Python dependencies
+# ============================================================
+# Install with:  pip install -r requirements.txt
+# Google Colab:  !pip install -r requirements.txt
+# ============================================================
+
+# --- Core ML / DL ---
+# NOTE: torch and torchvision must be installed via the CUDA wheel index FIRST.
+# Do NOT install them from PyPI (that gives the CPU-only build).
+# Install command (run once before this file):
+#   pip install torch==2.6.0+cu124 torchvision==0.21.0+cu124 \
+#       --index-url https://download.pytorch.org/whl/cu124
+# After that, run: pip install -r requirements.txt
+# (torch/torchvision are commented out here so pip won't downgrade them)
+# torch>=2.0.0        <-- installed via CUDA wheel, do not uncomment
+# torchvision>=0.15.0 <-- installed via CUDA wheel, do not uncomment
+
+# --- Hugging Face ecosystem ---
+transformers>=4.38.0
+datasets>=2.18.0
+tokenizers>=0.15.0
+huggingface_hub>=0.21.0
+accelerate>=0.27.0           # optional but recommended for trainer utilities
+evaluate>=0.4.1              # Hugging Face evaluation metrics
+
+# --- Scientific computing ---
+numpy>=1.24.0
+pandas>=2.0.0
+scikit-learn>=1.3.0
+
+# --- Visualisation ---
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# --- Notebook / interactive ---
+ipykernel>=6.25.0
+ipywidgets>=8.1.0
+tqdm>=4.66.0
+
+# --- App ---
+streamlit>=1.32.0
+
+# --- Utilities ---
+python-dotenv>=1.0.0
+pyyaml>=6.0
