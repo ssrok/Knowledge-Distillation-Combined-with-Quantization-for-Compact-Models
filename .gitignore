@@ -85,3 +85,9 @@ mlflow.db
 *.bak
 *.orig
 colab_upload.zip
+
+# Trained model checkpoints
+*.safetensors
+*.safetensors
+*.pt
+*.pth

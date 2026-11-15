@@ -1,0 +1,114 @@
+{
+  "experiment": "Knowledge Distillation + Quantization for Compact Models",
+  "dataset": "GLUE SST-2",
+  "n_train": 1500,
+  "n_val": 400,
+  "epochs": 3,
+  "alpha": 0.5,
+  "temperature": 2.0,
+  "seed": 42,
+  "models": [
+    {
+      "model": "M1",
+      "label": "BERT-base teacher",
+      "precision": "FP32",
+      "accuracy": 0.935,
+      "f1_macro": 0.935,
+      "size_mb": 417.66,
+      "latency_ms": 2825.88,
+      "n_val": 400
+    },
+    {
+      "model": "M2",
+      "label": "DistilBERT baseline",
+      "precision": "FP32",
+      "accuracy": 0.8725,
+      "f1_macro": 0.8725,
+      "size_mb": 255.42,
+      "latency_ms": 1365.75,
+      "n_val": 400
+    },
+    {
+      "model": "M3",
+      "label": "DistilBERT distilled",
+      "precision": "FP32",
+      "accuracy": 0.87,
+      "f1_macro": 0.8699,
+      "size_mb": 255.42,
+      "latency_ms": 1466.97,
+      "n_val": 400
+    },
+    {
+      "model": "M4",
+      "label": "DistilBERT quant-baseline",
+      "precision": "INT8",
+      "accuracy": 0.87,
+      "f1_macro": 0.87,
+      "size_mb": 91.0,
+      "latency_ms": 1199.06,
+      "n_val": 400
+    },
+    {
+      "model": "M5",
+      "label": "DistilBERT quant-distilled",
+      "precision": "INT8",
+      "accuracy": 0.86,
+      "f1_macro": 0.8596,
+      "size_mb": 91.0,
+      "latency_ms": 1202.63,
+      "n_val": 400
+    }
+  ],
+  "m2_training_history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.5303216148564156,
+      "train_acc": 0.7386666666666667,
+      "accuracy": 0.8575,
+      "f1": 0.8574,
+      "n": 400
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.26360762372929997,
+      "train_acc": 0.91,
+      "accuracy": 0.875,
+      "f1": 0.8748,
+      "n": 400
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.15977874041554777,
+      "train_acc": 0.9493333333333334,
+      "accuracy": 0.8725,
+      "f1": 0.8725,
+      "n": 400
+    }
+  ],
+  "m3_training_history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.0264278130328401,
+      "train_acc": 0.74,
+      "accuracy": 0.8475,
+      "f1": 0.8473,
+      "n": 400
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.4746231333689487,
+      "train_acc": 0.9,
+      "accuracy": 0.83,
+      "f1": 0.8281,
+      "n": 400
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.27535882524828964,
+      "train_acc": 0.9426666666666667,
+      "accuracy": 0.87,
+      "f1": 0.8699,
+      "n": 400
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+model,label,precision,accuracy,f1_macro,size_mb,latency_ms,n_val,accuracy_vs_m1,compression_vs_m2
+M1,BERT-base teacher,FP32,0.935,0.935,417.66,2825.88,400,0.0,0.61
+M2,DistilBERT baseline,FP32,0.8725,0.8725,255.42,1365.75,400,-0.0625,1.0
+M3,DistilBERT distilled,FP32,0.87,0.8699,255.42,1466.97,400,-0.065,1.0
+M4,DistilBERT quant-baseline,INT8,0.87,0.87,91.0,1199.06,400,-0.065,2.81
+M5,DistilBERT quant-distilled,INT8,0.86,0.8596,91.0,1202.63,400,-0.075,2.81
